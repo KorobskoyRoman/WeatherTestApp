@@ -18,10 +18,10 @@ struct Info: Codable {
 }
 
 struct Fact: Codable {
-    let temp: Int
+    let temp: Double
     let icon: String
     let condition: String
-    let windSpeed: Int
+    let windSpeed: Double
     let pressureMm: Int
     
     enum CodingKeys: String, CodingKey {
@@ -40,8 +40,8 @@ struct Parts: Codable {
 }
 
 struct Day: Codable {
-    let tempMin: Int = 0
-    let tempMax: Int = 0
+    let tempMin: Double? = 0.0
+    let tempMax: Double? = 0.0
     
     enum CodingKeys: String, CodingKey {
         case tempMin = "temp_min"
